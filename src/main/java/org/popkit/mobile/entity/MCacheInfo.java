@@ -5,7 +5,7 @@ import net.sf.ehcache.store.MemoryStoreEvictionPolicy;
 /**
  * use record register cache key info
  * @author Aborn Jiang
- * @email aborn.jiang # foxmail
+ * @email aborn.jiang AT foxmail
  * @date 06-13-2015
  * @time 11:11 PM
  */

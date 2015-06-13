@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * memory cache serivce
  * @author Aborn Jiang
- * @email aborn.jiang # foxmail.com
+ * @email aborn.jiang AT foxmail.com
  * @date 06-13-2015
  * @time 10:39 PM
  */

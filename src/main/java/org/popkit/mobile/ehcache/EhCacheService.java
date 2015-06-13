@@ -19,7 +19,7 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * use ehcache as MCacheService implementation.
  * @author Aborn Jiang
- * @email aborn.jiang # foxmail.com
+ * @email aborn.jiang AT foxmail.com
  * @date 06-13-2015
  * @time 10:40 PM
  */
