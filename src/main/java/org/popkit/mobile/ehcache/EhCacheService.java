@@ -218,13 +218,16 @@ public class EhCacheService implements MCacheService {
                 CacheConfiguration config = cache.getCacheConfiguration();
                 long oldEntriesLocalHeap = config.getMaxEntriesLocalHeap();
                 long oldTimeToLiveSeconds = config.getTimeToLiveSeconds();
+                long oldTimeToIdleSeconds = config.getTimeToIdleSeconds();
                 config.setMaxEntriesLocalHeap(maxEntriesLocalHeap);
                 config.setTimeToLiveSeconds(timeToLiveSeconds);
+                config.setTimeToIdleSeconds(timeToLiveSeconds > oldTimeToIdleSeconds ? oldTimeToIdleSeconds : timeToLiveSeconds);
 
                 // update register cache info
                 if (REGISTER_CACHE.containsKey(cacheKey)) {
                     MCacheInfo mCacheInfo = REGISTER_CACHE.get(cacheKey);
                     mCacheInfo.setTimeToLiveSeconds(timeToLiveSeconds);
+                    mCacheInfo.setTimeToIdleSeconds(timeToLiveSeconds > oldTimeToIdleSeconds ? oldTimeToIdleSeconds : timeToLiveSeconds);
                     mCacheInfo.setMaxEntriesLocalHeap(maxEntriesLocalHeap);
                 }
 

@@ -110,4 +110,8 @@ public class MCacheInfo {
     public void setTimeToLiveSeconds(long timeToLiveSeconds) {
         this.timeToLiveSeconds = timeToLiveSeconds;
     }
+
+    public void setTimeToIdleSeconds(long timeToIdleSeconds) {
+        this.timeToIdleSeconds = timeToIdleSeconds;
+    }
 }
