@@ -136,7 +136,15 @@ public class EhCacheService implements MCacheService {
 
     @Override
     public boolean cacheExists(String cacheKey) {
-        return null != cacheManager.getCache(cacheKey);
+        if (StringUtils.isBlank(cacheKey)) {
+            return false;
+        }
+
+        try {
+            return cacheManager.cacheExists(cacheKey);
+        } catch (Exception e) {
+            return false;
+        }
     }
 
     @Override
